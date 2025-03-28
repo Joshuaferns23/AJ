@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>How We Met</title>
+    <style>
+      /* Soft gradient background with image */
+      body {
+        background: linear-gradient(135deg, rgba(255, 211, 182, 0.8), rgba(255, 170, 165, 0.8)),
+        url("bj1.jpg");
+        background-size: cover;
+        background-position: center;
+        font-family: "Comic Sans MS", cursive, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        position: relative;
+        flex-direction: column;
+        overflow: hidden;
+      }
+
+      /* Menu bar styling */
+      .menu-bar {
+        width: 100%;
+        background: rgba(255, 79, 70, 0.9);
+        padding: 10px 0;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        position: fixed;
+        top: 0;
+        z-index: 2;
+      }
+
+      .menu-bar a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 1.2em;
+        transition: 0.3s ease;
+      }
+
+      .menu-bar a:hover {
+        color: #ffd3b6;
+      }
+
+      /* Header styling */
+      .header {
+        margin-top: 60px;
+        font-size: 2em;
+        color: #040200;
+        text-shadow: 0 0 8px rgba(144, 63, 39, 0.8);
+        font-weight: bold;
+        animation: pulse 1.5s infinite alternate;
+      }
+
+      /* Container styling */
+      .container {
+        text-align: center;
+        padding: 30px;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        position: relative;
+        z-index: 1;
+        max-width: 500px;
+        width: 90%;
+        animation: fadeIn 1s ease-in-out;
+      }
+
+      /* Textbox styling */
+      .textbox {
+        font-size: 1.6em;
+        color: #333;
+        background: #fff3e6;
+        padding: 20px;
+        border-radius: 12px;
+        margin-bottom: 25px;
+        border: 3px solid #ffad60;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Button styling */
+      .arrow-button {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        background: #ffad60;
+        border: none;
+        padding: 12px 18px;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 1.5em;
+        color: white;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+      }
+
+      .arrow-button:hover {
+        background: #ff8b42;
+        transform: scale(1.1);
+      }
+
+      /* Pulse animation for header */
+      @keyframes pulse {
+        from {
+          transform: scale(1);
+        }
+        to {
+          transform: scale(1.05);
+        }
+      }
+
+      /* Fade-in animation */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .container {
+          padding: 20px;
+          max-width: 90%;
+        }
+
+        .menu-bar a {
+          font-size: 1em;
+          margin: 0 10px;
+        }
+
+        .header {
+          font-size: 1.5em;
+        }
+
+        .textbox {
+          font-size: 1.2em;
+          padding: 15px;
+        }
+
+        .arrow-button {
+          font-size: 1.2em;
+          padding: 10px 15px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Menu Bar -->
+    <div class="menu-bar">
+      <a href="index.html">You mean a lot to me</a>
+    </div>
+
+    <!-- Header Section -->
+    <div class="header"> How we Met</div>
+
+    <!-- Main content container -->
+    <div class="container">
+      <div class="textbox">We met in the pondicherry .</div>
+
+      <!-- Next page button -->
+      <button class="arrow-button" onclick="goToNextPage()">&#8594;</button>
+    </div>
+
+    <!-- Navigation script -->
+    <script>
+      function goToNextPage() {
+        window.location.href = "page2.html"; // Change to your next page
+      }
+    </script>
+  </body>
+</html>
